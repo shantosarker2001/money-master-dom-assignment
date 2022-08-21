@@ -102,14 +102,15 @@
                                 <div class="col">
                                     <div id="list_container" class="bg-dark text-white rounded-3 py-3 px-2">
                                         <h2 class="my-3 fw-bold">Selected Players</h2>
-                                        <div>
-                                            <!-- <ol id="order_list text-white">
-                                                <li class="fw-semibold fs-4 ms-2 text-white">Coffee</li>
+                                        <hr>
+                                        <div style="min-height:200px;" class="shadow-lg ">
+                                            <ol id="order_list" type="1">
+                                                <!-- <li class="fw-semibold fs-4 ms-2 text-white">Coffee</li>
                                                 <li class="fw-semibold fs-4 ms-2 text-white">Tea</li>
                                                 <li class="fw-semibold fs-4 ms-2 text-white">Milk</li>
                                                 <li class="fw-semibold fs-4 ms-2 text-white">Tea</li>
-                                                <li class="fw-semibold fs-4 ms-2 text-white">Milk</li>
-                                            </ol> -->
+                                                <li class="fw-semibold fs-4 ms-2 text-white">Milk</li> -->
+                                            </ol>
                                         </div>
 
                                     </div>
@@ -117,11 +118,15 @@
                                 <div class="col mt-5 bg-dark text-white rounded-3  py-5 px-3">
                                     <form id="form">
                                         <div class="d-flex mb-4">
-                                            <h5 class="w-75">Player Expenses:</h5>
+                                            <h5 class="w-75">Per Player</h5>
                                             <input id="player_field" class="rounded-3 w-50 " type="text">
                                         </div>
 
                                         <div id="player_calculate" class="btn btn-primary w-100 mb-4">Calculate
+                                        </div>
+                                        <div class="d-flex mb-4">
+                                            <h5 class="w-75">Player Expenses:</h5>
+                                            <span>$</span> <span id="total_playerCost">00</span>
                                         </div>
 
                                         <div class=" d-flex mb-4">
@@ -134,7 +139,7 @@
                                             <input id="coach_field" class="rounded-3 ms-3 w-100" type="text">
                                         </div>
 
-                                        <div class="btn btn-primary w-100 mb-4">Calculate Total</div>
+                                        <div class="btn btn-primary w-100 mb-4" id="subtotal">Calculate Total</div>
                                         <div class="d-flex mb-4">
                                             <h5 class="w-75">Total:</h5>
                                             <span>$</span> <span id="total_field">00</span>

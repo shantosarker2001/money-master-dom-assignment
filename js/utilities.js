@@ -1,7 +1,7 @@
 function getInputValuebyId(inputId) {
     const inputField = document.getElementById(inputId);
-    const inputFieldString = inputField.value
-    const inputValue = parseFloat(inputFieldString)
+    let inputFieldString = inputField.value
+    const inputValue = parseInt(inputFieldString)
     inputField.value = '';
 
     return inputValue;
@@ -10,7 +10,7 @@ function getInputValuebyId(inputId) {
 function getElementValueById(elementId) {
     const element = document.getElementById(elementId);
     const elementString = element.innerText
-    const elementValue = parseFloat(elementString)
+    const elementValue = parseInt(elementString)
 
     return elementValue;
 }
