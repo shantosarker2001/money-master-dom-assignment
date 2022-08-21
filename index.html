@@ -7,11 +7,11 @@
     <title>Best Five Players</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+
     <style>
-        #order_list {}
+        #order_list li {
+            /* list-style: block; */
+        }
     </style>
 </head>
 
@@ -35,14 +35,14 @@
         <section>
             <div class="container mb-5 my-5">
                 <div class="row">
-                    <div class="col-9">
+                    <div class="col-9 " id="get_class">
                         <div class="row row-cols-1 row-cols-md-3 g-4">
                             <div class="col">
                                 <div class="card text-center bg-light border-0 shadow">
                                     <img src="img/Rectangle 144 (1).png" class="card-img-top image-fluid" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title fw-bold fs-3 my-3">Kylian Mbappe</h5>
-                                        <div class="btn btn-outline-success px-4 rounded-pill">Select</div>
+                                        <div class="btn btn-outline-primary px-5 rounded-pill">Select</div>
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@
                                     <img src="img/Rectangle 144 (2).png" class="card-img-top image-fluid" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title fw-bold fs-3 my-3">Lionel Messi</h5>
-                                        <div class="btn btn-outline-success px-4 rounded-pill">Select</div>
+                                        <div class="btn btn-outline-primary px-5 rounded-pill">Select</div>
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
                                     <img src="img/Rectangle 144 (3).png" class="card-img-top image-fluid" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title fw-bold fs-3 my-3">Vítor Machado</h5>
-                                        <div class="btn btn-outline-success px-4 rounded-pill">Add To cart</div>
+                                        <div class="btn btn-outline-primary px-5 rounded-pill">Select</div>
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@
                                     <img src="img/Rectangle 144 (4).png" class="card-img-top image-fluid" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title fw-bold fs-3 my-3">Renato Sanches</h5>
-                                        <div class="btn btn-outline-success px-4 rounded-pill">Add To cart</div>
+                                        <div class="btn btn-outline-primary px-5 rounded-pill">Select</div>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@
                                     <img src="img/Rectangle 144.png" class="card-img-top image-fluid" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title fw-bold fs-3 my-3">Neymar Jr.</h5>
-                                        <div class="btn btn-outline-success px-4 rounded-pill">Add To cart</div>
+                                        <div class="btn btn-outline-primary px-5 rounded-pill">Select</div>
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
                                     <img src="img/Rectangle 144.jpg" class="card-img-top image-fluid" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title fw-bold fs-3 my-3">Sergio Ramos</h5>
-                                        <div class="btn btn-outline-success px-4 rounded-pill">Select</div>
+                                        <div class="btn btn-outline-primary px-5 rounded-pill">Select</div>
                                     </div>
                                 </div>
                             </div>
@@ -99,53 +99,56 @@
                             <div class="row row-cols-1 g-3 align-items-center">
                                 <div class="col">
                                     <div id="list-container ">
-                                        <h2>Ordered List with Numbers</h2>
-                                        <ol type="A">
-                                            <li>Coffee</li>
-                                            <li>Tea</li>
-                                            <li>Milk</li>
+                                        <h2 class="my-3 fw-bold">Selected Players</h2>
+                                        <ol type="1" class="bg-dark rounded-3 py-3 px-2" style="min-height:200px;">
+                                            <li class="fw-semibold fs-4 ms-5 text-white">Coffee</li>
+                                            <li class="fw-semibold fs-4 ms-5 text-white">Tea</li>
+                                            <li class="fw-semibold fs-4 ms-5 text-white">Milk</li>
+                                            <li class="fw-semibold fs-4 ms-5 text-white">Tea</li>
+                                            <li class="fw-semibold fs-4 ms-5 text-white">Milk</li>
                                         </ol>
                                     </div>
+                                </div>
+                                <div class="col mt-5 bg-dark text-white rounded-3  py-5 px-3">
+                                    <form id="form">
+                                        <div class="d-flex mb-4">
+                                            <h5 class="w-75">Player Expenses:</h5>
+                                            <input id="player_field" class="rounded-3 w-50 " type="text">
+                                        </div>
 
-                                </div>
-                                <div class="col-auto">
-                                    <label for="inputPassword6" class="col-form-label">Password</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="password" id="inputPassword6" class="form-control"
-                                        aria-describedby="passwordHelpInline">
-                                </div>
-                                <div class="col-auto">
-                                    <label for="inputPassword6" class="col-form-label">Password</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="password" id="inputPassword6" class="form-control"
-                                        aria-describedby="passwordHelpInline">
-                                </div>
-                                <div class="col-auto">
-                                    <label for="inputPassword6" class="col-form-label">Password</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="password" id="inputPassword6" class="form-control"
-                                        aria-describedby="passwordHelpInline">
-                                </div>
-                                <div class="col-auto">
-                                    <label for="inputPassword6" class="col-form-label">Password</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="password" id="inputPassword6" class="form-control"
-                                        aria-describedby="passwordHelpInline">
+                                        <div id="player_calculate" class="btn btn-primary w-100 mb-4">Calculate
+                                        </div>
+
+                                        <div class=" d-flex mb-4">
+                                            <h5 class="w-75">Manager</h5>
+                                            <input id="manager_field" class="rounded-3 ms-3 w-100" type="text">
+                                        </div>
+
+                                        <div class="d-flex mb-4">
+                                            <h5 class="w-75">Coach</h5>
+                                            <input id="coach_field" class="rounded-3 ms-3 w-100" type="text">
+                                        </div>
+
+                                        <div class="btn btn-primary w-100 mb-4">Calculate Total</div>
+                                        <div class="d-flex mb-4">
+                                            <h5 class="w-75">Total:</h5>
+                                            <span>$</span> <span id="total_field">00</span>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
-            </div>
         </section>
     </main>
+    <script src="js/utilities.js"></script>
+    <script src="js/app.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
         </script>
+
 </body>
 
 </html>
