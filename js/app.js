@@ -1,3 +1,7 @@
+function lenthOfList() {
+
+}
+
 const buttons = document.querySelectorAll(".get button");
 
 for (let button of buttons) {
@@ -7,18 +11,30 @@ for (let button of buttons) {
         // console.log(title)
         const container = document.getElementById('list_container')
         // console.log(container)
+
         const list = document.getElementById('order_list')
+        let number = document.getElementById("order_list").children
+        console.log(number.length)
+        if (number.length == 5) {
+            return number.length;
+        }
         // const newOl = document.createElement('ol')
         const newLi = document.createElement('li')
+        lenthOfList()
         newLi.innerText = title
+
         list.appendChild(newLi)
+
         // container.appendChild(newOl)
         // console.log(newOl)
-        console.log(newLi.parentNode.parentNode.childNodes)
+        // console.log(newLi.parentNode.parentNode.childNodes)
+
     })
 }
 document.getElementById('player_calculate').addEventListener('click', function () {
-    const totalPlayer = 5
+
+    const totalPlayer = lenthOfList()
+    console.log(totalPlayer)
     const perPlayerCost = getInputValuebyId("player_field")
     console.log(perPlayerCost)
     const playerCost = perPlayerCost * totalPlayer
