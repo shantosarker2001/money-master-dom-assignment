@@ -65,9 +65,10 @@ document.getElementById("subtotal").addEventListener("click", function () {
         alert("Provide a positive number")
         return;
     }
+    // const currentTotal = CurrenttotalPlayerCost + managerCost + coachCost
     const currentTotal = CurrenttotalPlayerCost + managerCost + coachCost
     const CurrentSubTotalField = getElementValueById("total_field")
     const subtotalValue = currentTotal + CurrentSubTotalField
-    setElementValueById("total_field", subtotalValue)
+    setElementValueById("total_field", currentTotal)
 
 })
