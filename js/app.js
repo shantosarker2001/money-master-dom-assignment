@@ -11,21 +11,23 @@ for (let button of buttons) {
         if (number.length === 5) {
             alert("Limit cross")
             return number.length;
-
         }
         console.log(number.length)
         const newLi = document.createElement('li')
         newLi.innerText = title
         list.appendChild(newLi)
         event.target.setAttribute("disabled", true);
-        event.target.style.backgroundColor = "black";
+        event.target.innerText = "Selected"
+        event.target.style.backgroundColor = " rgb(3, 3, 34)";
+        event.target.style.border = "1px solid white";
+        event.target.style.color = " white";
     })
 }
+// calculate button
 document.getElementById('player_calculate').addEventListener('click', function () {
 
     let number = document.getElementById("order_list").children
     const totalPlayer = number.length
-    // console.log(totalPlayer)
     const perPlayerCost = getInputValuebyId("player_field")
     if (isNaN(perPlayerCost)) {
         alert("Provide a number")
@@ -35,19 +37,13 @@ document.getElementById('player_calculate').addEventListener('click', function (
         alert("Provide a positive number")
         return;
     }
-
-    // console.log(perPlayerCost)
     const playerCost = perPlayerCost * totalPlayer
 
     const CurrenttotalPlayerCost = getElementValueById("total_playerCost")
-
-    // const newtotal = CurrenttotalPlayerCost + playerCost
-
     setElementValueById("total_playerCost", playerCost)
-    // setElementValueById("total_playerCost", newtotal)
-
 })
 
+// totalButton
 document.getElementById("subtotal").addEventListener("click", function () {
     const CurrenttotalPlayerCost = getElementValueById("total_playerCost")
     CurrenttotalPlayerCost.innerText = "";
@@ -73,6 +69,5 @@ document.getElementById("subtotal").addEventListener("click", function () {
     const CurrentSubTotalField = getElementValueById("total_field")
     const subtotalValue = currentTotal + CurrentSubTotalField
     setElementValueById("total_field", subtotalValue)
-    // CurrenttotalPlayerCost = ""
 
 })
