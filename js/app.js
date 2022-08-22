@@ -1,12 +1,9 @@
-function lenthOfList() {
-
-
-}
 
 const buttons = document.querySelectorAll(".get button");
 
 for (let button of buttons) {
     button.addEventListener('click', function (event) {
+
         const title = event.target.parentNode.childNodes[1].innerText
         const container = document.getElementById('list_container')
         const list = document.getElementById('order_list')
@@ -15,25 +12,20 @@ for (let button of buttons) {
             return number.length;
         }
         console.log(number.length)
-        // const newOl = document.createElement('ol')
         const newLi = document.createElement('li')
         newLi.innerText = title
         list.appendChild(newLi)
         event.target.setAttribute("disabled", true);
-        event.target.style.backgroundColor = "lightblue";
-
-
+        event.target.style.backgroundColor = "rgb(3, 3, 34)";
     })
 }
 document.getElementById('player_calculate').addEventListener('click', function () {
 
     let number = document.getElementById("order_list").children
-    // if (number.length == 5) {
-    //     return number.length;
-    // }
     const totalPlayer = number.length
     console.log(totalPlayer)
     const perPlayerCost = getInputValuebyId("player_field")
+
     console.log(perPlayerCost)
     const playerCost = perPlayerCost * totalPlayer
     const CurrenttotalPlayerCost = getElementValueById("total_playerCost")
