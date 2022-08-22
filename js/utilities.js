@@ -2,8 +2,7 @@ function getInputValuebyId(inputId) {
     const inputField = document.getElementById(inputId);
     let inputFieldString = inputField.value
     const inputValue = parseInt(inputFieldString)
-    inputField.value = '';
-
+    // inputField.value = '';
     return inputValue;
 }
 
@@ -16,5 +15,5 @@ function getElementValueById(elementId) {
 }
 function setElementValueById(elementId, newValue) {
     const element = document.getElementById(elementId);
-    element.innerText = newValue;
+    element.innerText = parseInt(newValue);
 }
